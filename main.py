@@ -1,5 +1,5 @@
 from flat import Bill, Flatmate
-from reports import PdfReport
+from reports import PdfReport, FileSharer
 
 bill_amount = float(input("Enter the bill amount: "))
 bill_period = input("What is the bill period? E.g. December 2022: ")
@@ -21,8 +21,8 @@ pdf_report = PdfReport(filename=f"{the_bill.period}.pdf")
 pdf_report.generate(flatmate1=flatmate1, flatmate2=flatmate2, bill=the_bill)
 
 # in case if you deploy it in repl.it
-# file_sharer = FileSharer(filepath=pdf_report.filename)
-# print(file_sharer.share())
+file_sharer = FileSharer(filepath=pdf_report.filename)
+print(file_sharer.share())
 
 
 
