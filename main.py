@@ -20,7 +20,9 @@ print(f"{flatmate2.name} pays: ", flatmate2.pays(bill=the_bill, flatmate2=flatma
 pdf_report = PdfReport(filename=f"{the_bill.period}.pdf")
 pdf_report.generate(flatmate1=flatmate1, flatmate2=flatmate2, bill=the_bill)
 
-
+# in case if you deploy it in repl.it
+# file_sharer = FileSharer(filepath=pdf_report.filename)
+# print(file_sharer.share())
 
 
 
